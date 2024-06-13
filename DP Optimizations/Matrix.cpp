@@ -43,4 +43,18 @@ struct matrix{
             
         return ret;
     }
+    
+    matrix operator ^(int64 n){
+        matrix result(rep);
+        matrix power = result;
+        n --;
+        
+        for (int i = 1; i <= n; i *= 2){
+            if (i & n)
+                result = result * power;
+            power = power * power;
+        }
+        
+        return result;
+    }
 };
