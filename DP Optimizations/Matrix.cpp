@@ -1,5 +1,6 @@
 //complexity: O(k^3 * log2(n))
 //practice: https://codeforces.com/gym/102644
+//the product of the state matrix * the ith column of the transition matrix is the new ith value
 
 template<typename T>
 struct matrix{
