@@ -29,9 +29,7 @@ struct matrix{
     }
     
     matrix operator *(const matrix &a){
-        if (columns != a.rows)
-            return matrix(0, 0);
-                
+        assert(columns == a.rows);                
         matrix ret(rows, a.columns);
             
         for (int r = 0; r < rows; r ++)
