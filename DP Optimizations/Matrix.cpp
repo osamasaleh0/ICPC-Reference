@@ -47,7 +47,7 @@ struct matrix{
         matrix power = result;
         n --;
         
-        for (int i = 1; i <= n; i *= 2){
+        for (int64 i = 1; i <= n; i *= 2){
             if (i & n)
                 result = result * power;
             power = power * power;
